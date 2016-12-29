@@ -1,0 +1,2 @@
+build\examples\cifar10\Release\convert_cifar_data.exe "C:\Workspace\Nets\caffe\data\cifar10" "C:\Workspace\Nets\caffe\examples\cifar10" lmdb
+build\tools\Release\compute_image_mean.exe -backend=lmdb "C:\Workspace\Nets\caffe\examples\cifar10\cifar10_train_lmdb" "C:\Workspace\Nets\caffe\examples\cifar10\mean.binaryproto"
