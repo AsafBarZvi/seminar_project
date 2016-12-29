@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 set -e
 
-TOOLS=./build/tools
+TOOLS=./build/tools/Release
 
 $TOOLS/caffe train \
   --solver=examples/cifar10/cifar10_quick_solver.prototxt $@

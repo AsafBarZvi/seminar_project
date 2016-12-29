@@ -145,12 +145,15 @@ call "%batch_file%" amd64
 :: below to use cuDNN
 cmake -G"!CMAKE_GENERATOR!" ^
       -DBLAS=Open ^
+	  -DCMAKE_C_COMPILER=cl ^
+	  -DCMAKE_CXX_COMPILER=cl ^
       -DCMAKE_BUILD_TYPE:STRING=%CMAKE_CONFIG% ^
       -DBUILD_SHARED_LIBS:BOOL=%CMAKE_BUILD_SHARED_LIBS% ^
       -DBUILD_python:BOOL=%BUILD_PYTHON% ^
       -DBUILD_python_layer:BOOL=%BUILD_PYTHON_LAYER% ^
       -DBUILD_matlab:BOOL=%BUILD_MATLAB% ^
       -DCPU_ONLY:BOOL=%CPU_ONLY% ^
+	  -DCUDNN_ROOT=C:/Projects/caffe/cudnn-8.0-windows10-x64-v5.1/cuda ^
       -C "%cd%\libraries\caffe-builder-config.cmake" ^
       "%~dp0\.."
 
